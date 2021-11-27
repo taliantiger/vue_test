@@ -1,0 +1,19 @@
+<div 
+    id="app-21">
+    <h1 v-if="type === 'A'">A</h1>
+    <h1 v-else-if="type ==='B'">B</h1>
+    <h1 v-else>Not A/B</h1>
+
+    <h1 v-show="ok">hello</h1>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script> 
+<script>
+    const vm = new Vue({
+        el: '#app-21',
+        data: {
+            type: 'C',
+            ok: false
+        }
+    })
+</script>

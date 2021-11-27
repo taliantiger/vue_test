@@ -1,0 +1,25 @@
+<div
+    id="app-18">
+    <my-component class="baz boo"></my-component>
+    
+    <h1>Today is November 19th.</h1>
+
+    <my-component v-bind:class="{ active : isActive }"></my-component>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    Vue.component('my-component', {
+        template: '<p class="foo bar">Hi</p>'
+    })
+
+    const vm = new Vue({
+        el: "#app-18",
+        data: {
+            activeClass: 'active',
+            errorClass: 'text-danger',
+
+            isActive: false
+        }
+    })
+</script>

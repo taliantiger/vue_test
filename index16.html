@@ -1,0 +1,24 @@
+<div
+    id="app-16"
+    v-bind:class="classObject">
+    <h1>Today is November 19th</h1>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    var vm = new Vue({
+        el: '#app-16',
+        data: {
+            isActive: true,
+            error: null
+        },
+        computed: {
+            classObject: function(){
+                return {
+                    active: this.isActive && !this.error,
+                    'text-danger': this.error && this.error.type === 'fatal'
+                }
+            }
+        }
+    })
+</script>

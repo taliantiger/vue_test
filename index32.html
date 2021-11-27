@@ -1,0 +1,15 @@
+<div id="app-32">
+    <input v-on:keyup.enter="submit">
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: '#app-32',
+        methods: {
+            submit: function(){
+                alert("This is a key test")
+            }
+        }
+    })
+</script>

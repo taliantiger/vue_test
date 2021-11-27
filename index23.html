@@ -1,0 +1,21 @@
+<div 
+    id="app-23"> 
+    <li v-for="(item, index) of items">
+        {{ parentMessage }} - {{ index }} - {{ item.message }}
+    </li>
+
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: '#app-23',
+        data: {
+            parentMessage: 'Parent',
+            items: [
+                {message: 'apple'},
+                {message: 'orange'}
+            ]
+        }
+    })
+</script>

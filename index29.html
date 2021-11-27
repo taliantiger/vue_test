@@ -1,0 +1,22 @@
+<div id="example-2">
+    <input v-on:click="greet">Greet</input>
+
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: '#example-2',
+        data: {
+            name: 'Vue.js'
+        },
+        methods: {
+            greet: function(event) {
+                alert('Hello' + this.name + '!')
+                if(event) {
+                    alert(event.target.tagName)
+                }
+            }
+        }
+    })
+</script>

@@ -1,0 +1,19 @@
+<div 
+    id="app-20">
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no 表情😢</h1>
+
+    <h2 v-if="Math.random() > 0.5">Now you see me</h2>
+    <h2 v-else>Now you don't</h2>
+
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: '#app-20',
+        data: {
+            awesome: false
+        }
+    })
+</script>

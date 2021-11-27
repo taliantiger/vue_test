@@ -1,0 +1,18 @@
+<div
+    id="app-14"
+    class="static"
+    v-bind:class="{ active: isActive, 'text-danger': hasError }">
+    
+    <h1>Today is November 19th</h1>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: "#app-14",
+        data: {
+            isActive: true,
+            hasError: false
+        }
+    })
+</script>

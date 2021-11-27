@@ -1,0 +1,19 @@
+<div id="example">
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reveresd message: "{{ reversedMessage }}"</p>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: '#example',
+        data: {
+            message: 'hello'
+        },
+        computed: {
+            reversedMessage: function(){
+                return this.message.split('').reverse().join('')
+            }
+        }
+    })
+</script>

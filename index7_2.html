@@ -1,0 +1,30 @@
+<div id="app-7">
+    <ol>
+        <!-- 创建一个todo-item 组件实例 -->
+        <todo-item
+            v-for="item in groceryList"
+            v-bind:todo="item"
+            v-bind:key="item.id"
+        ></todo-item>
+    </ol>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
+    })
+
+    const app7 = new Vue ({
+        el: '#app-7',
+        data: {
+            product: 'computer',
+            groceryList: [
+                {id: 0, text: '蔬菜'},
+                {id: 1, text: '奶酪'},
+                {id: 2, text: '随便其他什么人吃的东西'}
+            ]
+        }
+    })
+</script>

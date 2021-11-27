@@ -1,0 +1,31 @@
+<div>
+    <ul 
+        id="v-for-object"
+        class="demo">
+        <li
+            v-for="( value, name, index ) in object"
+            v-bind:key="items.id">
+            {{ index }}. {{ name }} : {{ value }}
+        </li>
+
+    </ul>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: '#v-for-object',
+        data: {
+            object: {
+                title: 'How to do lists in Vue',
+                author: 'Jone Doe',
+                publishedAt: '2016-04-10'
+            },
+            items: {
+                food: 'orange',
+                tools: 'computer',
+                id: 5
+            }
+        }
+    })
+</script>

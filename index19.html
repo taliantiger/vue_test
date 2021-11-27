@@ -1,0 +1,16 @@
+<div 
+    id="app-19"
+    v-bind:style="{ color: activeColor, fontSize: fontSize + 'pz' }">
+    <h1>Today is November 19th.</h1>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: '#app-19',
+        data: {
+            activeColor: 'red',
+            fontSize: 30
+        }
+    })
+</script>
