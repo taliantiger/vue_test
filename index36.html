@@ -1,0 +1,30 @@
+<div id="app-36">
+    <input 
+        type="radio"
+        id="one"
+        value="One"
+        v-model="picked"
+    >
+    <label for="one">One</label> 
+
+    <input 
+        type="radio"
+        id="two"
+        value="Two"
+        v-model="picked"
+    >
+    <label for="two">Two</label>
+
+    <br>
+    <span>Picked: {{ picked }}</span>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+         el: '#app-36',
+         data: {
+             picked: ''
+         }
+    })
+</script>

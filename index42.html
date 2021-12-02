@@ -1,0 +1,16 @@
+<div id="app-42">
+    <blog-post title="My journey with Vue"></blog-post>
+    <blog-post title="November 29th with Vue"></blog-post>
+    <blog-post title="TheCraftOfSeftTeaching with Vue"></blog-post>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    Vue.component('blog-post', {
+        props: ['title'],
+        template: '<h3> {{ title }}</h3>'
+    })
+    const vm = new Vue({
+        el: '#app-42'
+    })
+</script>

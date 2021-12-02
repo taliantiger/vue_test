@@ -1,0 +1,43 @@
+<div id="app-48">
+    <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post
+            v-for="post in posts"
+            v-bind:key="post.id"
+            v-bind:post="post"
+            v-on:enlarge-text="onEnlargeText">
+        </blog-post>
+    </div>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    Vue.component('blog-post', {
+        props: ['post'],
+        template: `
+            <div class="blog-post">
+                <h3>{{ post.title }}</h3>
+                <button v-on:click="$emit('enlarge-text', 0.1)">
+                    Enlarge text  
+                </button>
+                <div v-html="post.content"></div>
+            </div>
+        `
+    })
+    
+    const vm = new Vue({
+        el: '#app-48',
+        data: {
+            posts: [
+                {id: 1, title: 'December 2nd is Today', content: 'content1'},
+                {id: 2, title: 'This is a title', content: 'content2'},
+                {id: 3, title: 'Test Vue', content: 'content3'}
+            ],
+            postFontSize: 1
+        },
+        methods: {
+            onEnlargeText: function(enlargeAmount){
+                this.postFontSize += enlargeAmount
+            }
+        }
+    })
+</script>

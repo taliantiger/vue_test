@@ -1,0 +1,26 @@
+<div id="app-40">
+    <input 
+        type="radio" 
+        v-model="picked"
+        value="a"
+    >
+    <input 
+        type="checkbox" 
+        v-model="toggle"
+    >
+    <select v-model="selected">
+        <option value="abc">ABC</option>
+    </select>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: '#app-40',
+        data: {
+            picked: 'a',
+            toggle: true,
+            selected: 'abc'
+        }
+    })
+</script>

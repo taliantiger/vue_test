@@ -1,0 +1,22 @@
+<div id="app-41">
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    Vue.component('button-counter', {
+        data: function(){
+            return {
+                count: 0
+            }
+        },
+        template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+    })
+
+    const vm = new Vue({
+        el: '#app-41'
+    })
+</script>

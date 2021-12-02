@@ -1,0 +1,15 @@
+<div id="app-45">
+    <blog-post2 title="This is also a test"></blog-post2>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    Vue.component('blog-post2', {
+        props: ['title'],
+        template: '<h4>{{ title }}</h4>'
+    })
+
+    const vm = new Vue({
+        el: '#app-45'
+    })
+</script>

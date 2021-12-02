@@ -1,0 +1,17 @@
+<div id="app-35">
+    <span>Multiline message is: </span>
+    <p style="white-space: pre-line;">{{ message }}</p>
+    <br>
+    <textarea v-model="message" placeholder="add multiple lines"></textarea>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+
+<script>
+    const vm = new Vue({
+        el: "#app-35",
+        data: {
+            message: ""
+        }
+    })
+</script>

@@ -1,0 +1,31 @@
+<div id="app-46">
+    <blog-post4 
+        v-for="post in posts"
+        v-bind:key="post.id"
+        v-bind:post=post></blog-post4>
+    <div v-html="content"></div>
+</div>
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    Vue.component('blog-post4', {
+        props: ['title'],
+        template: `
+            <div class="blog-post4">
+                <h3>{{ post.title }}</h3>
+                <div v-html="post.content"></div>
+            </div>
+        `
+    })
+
+    const vm = new Vue({
+        el: '#app-46',
+        data: {
+            posts: [
+                {id: 1, title: 'November 29th', content: 'content1'},
+                {id: 2, title: 'December will come', content: 'content2'},
+                {id: 3, title: 'January will come in 2 months later', content: 'content3'}
+            ]
+        }
+    })
+</script>

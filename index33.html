@@ -1,0 +1,15 @@
+<div id="app-33">
+    <input v-model="message" placeholder="edit me">
+    <p>Message is: {{ message }}</p>
+</div>
+
+
+<script src="https://www.unpkg.com/vue"></script>
+<script>
+    const vm = new Vue({
+        el: '#app-33',
+        data: {
+            message: ""
+        }
+    })
+</script>
